@@ -6,6 +6,10 @@ class GalaxiesService {
         return galaxies
     }
 
+    async createGalaxy(galaxyData) {
+        const newGalaxy = await dbContext.Galaxies.create(galaxyData)
+        return newGalaxy
+    }
 }
 
 export const galaxiesService = new GalaxiesService()
